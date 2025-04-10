@@ -1,0 +1,11 @@
+{
+	"id": "sample-plugin",
+	"name": "Sample Plugin",
+	"version": "1.0.0",
+	"minAppVersion": "0.15.0",
+	"description": "A sample starter for building a new obsidian plguin",
+	"author": "Qing Zhu",
+	"authorUrl": "https://github.com/qingzhusay",
+	"fundingUrl": "https://ko-fi.com/qingzhu",
+	"isDesktopOnly": false
+}
