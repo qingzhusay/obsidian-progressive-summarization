@@ -1,9 +1,9 @@
 {
-	"id": "sample-plugin",
-	"name": "Sample Plugin",
+	"id": "progressive-summarization",
+	"name": "Progressive Summarization",
 	"version": "1.0.0",
 	"minAppVersion": "0.15.0",
-	"description": "A sample starter for building a new obsidian plguin",
+	"description": "Progressive Summarization for Building A Second Brain",
 	"author": "Qing Zhu",
 	"authorUrl": "https://github.com/qingzhusay",
 	"fundingUrl": "https://ko-fi.com/qingzhu",
