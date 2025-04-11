@@ -1,21 +1,25 @@
 import { EditorRange } from "obsidian";
 
-export interface MarkFormat {
-    name: string;
+export interface SummarizationLevel {
+    level: number;
     pattern: RegExp;
-    type: 'inline' | 'block';
+    displayName: string;
 }
 
-export const markFormats: MarkFormat[] = [
-    { name: 'Bold', pattern: /\*\*([^*]+)\*\*/g, type: 'inline' },
-    { name: 'Italics', pattern: /\*([^*]+)\*/g, type: 'inline' },
-    { name: 'Highlight', pattern: /==(.*?)==/g, type: 'inline' },
-    { name: 'Strikethrough', pattern: /~~(.*?)~~/g, type: 'inline' },
-    { name: 'Code', pattern: /`([^`]+)`/g, type: 'block' },
-    { name: 'Math', pattern: /\$\$(.*?)\$\$/g, type: 'block' },
-    { name: 'Comment', pattern: /%%(.+?)%%/g, type: 'inline' }
+export const SummarizationLevels: SummarizationLevel[] = [
+    {
+        level: 1,
+        pattern: /\*\*([^*]+)\*\*/g,
+        displayName: "Bold"
+    },
+    {
+        level: 2,
+        pattern: /==(.*?)==/g,
+        displayName: "Highlight"
+    }
 ];
 
 export interface MarkedRange extends EditorRange {
-    format?: string;
+    content?: string;
+    level: SummarizationLevel;
 }

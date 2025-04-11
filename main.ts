@@ -1,6 +1,6 @@
 import { Plugin, WorkspaceLeaf } from 'obsidian';
 import { Logger } from './src/utils/logger';
-import { ProgressiveSummarizationrView, PROGRESSIVE_SUMMARIZATION_VIEW } from './src/views/ProgressiveSummarizationrView';
+import { ProgressiveSummarizationView, PROGRESSIVE_SUMMARIZATION_VIEW } from './src/views/ProgressiveSummarizationView';
 
 export default class ProgressiveSummarizationPlugin extends Plugin {
     private logger: Logger;
@@ -11,7 +11,7 @@ export default class ProgressiveSummarizationPlugin extends Plugin {
 
         this.registerView(
             PROGRESSIVE_SUMMARIZATION_VIEW,
-            (leaf: WorkspaceLeaf) => new ProgressiveSummarizationrView(leaf)
+            (leaf: WorkspaceLeaf) => new ProgressiveSummarizationView(leaf)
         );
 
         this.addCommand({

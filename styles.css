@@ -10,3 +10,12 @@ If your plugin does not need CSS, delete this file.
 .marked-text-item {
     cursor: pointer;
 }
+
+.level-button-active {
+    background-color: var(--interactive-accent) !important;
+    color: var(--text-on-accent) !important;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-1px);
+    transition: all 0.2s ease;
+}
