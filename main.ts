@@ -14,14 +14,6 @@ export default class ProgressiveSummarizationPlugin extends Plugin {
             (leaf: WorkspaceLeaf) => new ProgressiveSummarizationView(leaf)
         );
 
-        this.addCommand({
-            id: 'show-progressive-summarization-view',
-            name: 'Show Progressive Summarization View',
-            callback: () => {
-                this.activateView();
-            },
-        });
-
         this.app.workspace.onLayoutReady(() => {
             this.activateView();
         });
@@ -29,7 +21,6 @@ export default class ProgressiveSummarizationPlugin extends Plugin {
 
     onunload() {
         this.logger.info('Plugin unloaded');
-        this.app.workspace.detachLeavesOfType(PROGRESSIVE_SUMMARIZATION_VIEW);
     }
 
     async activateView() {
